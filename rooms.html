@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - RentHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="app-page">
+<div class="dashboard">
+    <div class="sidebar">
+        <div>
+            <h2>RentHub</h2>
+            <p>Property Manager</p>
+            <ul>
+                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li class="active"><a href="rooms.html"><i class="fa-solid fa-door-open"></i> Rooms</a></li>
+                <li><a href="tenants.html"><i class="fa-solid fa-users"></i> Tenants</a></li>
+                <li><a href="payments.html"><i class="fa-solid fa-credit-card"></i> Payments</a></li>
+                <li><a href="reports.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
+            </ul>
+        </div>
+
+        <div class="user" id="userPanel">
+            <p><b id="currentUserName">Admin User</b></p>
+            <p id="currentUserEmail">admin@renthub.com</p>
+            <p><button onclick="logout()" class="link-button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></p>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <div>
+                <h1>Rooms</h1>
+                <p id="totalRooms">0 rooms total</p>
+            </div>
+            <button onclick="addRoom()"><i class="fa-solid fa-plus"></i> Add Room</button>
+        </div>
+
+        <div class="table rooms-table">
+            <div class="table-header">
+                <div>Room Number</div>
+                <div>Description</div>
+                <div>Price / Month</div>
+                <div>Status</div>
+                <div>Actions</div>
+            </div>
+
+            <div id="roomTable">
+                <div class="empty">No rooms found</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

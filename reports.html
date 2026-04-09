@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - RentHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="app-page">
+<div class="dashboard">
+    <div class="sidebar">
+        <div>
+            <h2>RentHub</h2>
+            <p>Property Manager</p>
+            <ul>
+                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="rooms.html"><i class="fa-solid fa-door-open"></i> Rooms</a></li>
+                <li><a href="tenants.html"><i class="fa-solid fa-users"></i> Tenants</a></li>
+                <li><a href="payments.html"><i class="fa-solid fa-credit-card"></i> Payments</a></li>
+                <li class="active"><a href="reports.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
+            </ul>
+        </div>
+
+        <div class="user" id="userPanel">
+            <p><b id="currentUserName">Admin User</b></p>
+            <p id="currentUserEmail">admin@renthub.com</p>
+            <p><button onclick="logout()" class="link-button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></p>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <div>
+                <h1>Reports</h1>
+                <p>Overall property performance snapshot.</p>
+            </div>
+            <div class="button-group">
+                <button onclick="exportReportsCSV()"><i class="fa-solid fa-file-csv"></i> Export CSV</button>
+                <button onclick="exportReportsPDF()"><i class="fa-solid fa-file-pdf"></i> Export PDF</button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <div class="icon green"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <h2 id="repRevenue">Rs 0.00</h2>
+                <p>Total Revenue Collected</p>
+            </div>
+            <div class="card">
+                <div class="icon blue"><i class="fa-solid fa-house-user"></i></div>
+                <h2 id="repOccupancyRate">0%</h2>
+                <p>Occupancy Rate</p>
+            </div>
+            <div class="card">
+                <div class="icon purple"><i class="fa-solid fa-receipt"></i></div>
+                <h2 id="repCollectedCount">0</h2>
+                <p>Payments Collected</p>
+            </div>
+            <div class="card">
+                <div class="icon orange"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <h2 id="repPaytmCount">0</h2>
+                <p>Paytm Payments</p>
+            </div>
+        </div>
+
+        <div class="overview-grid" style="margin-top: 20px;">
+            <div class="overview">
+                <h2>Payment Status Breakdown</h2>
+                <p>Paid <span id="repPaidText">0 of 0</span></p>
+                <progress id="repPaidProgress" value="0" max="100"></progress>
+
+                <p>Pending <span id="repPendingText">0 of 0</span></p>
+                <progress id="repPendingProgress" value="0" max="100"></progress>
+
+                <p>Overdue <span id="repOverdueText">0 of 0</span></p>
+                <progress id="repOverdueProgress" value="0" max="100"></progress>
+            </div>
+
+            <div class="overview">
+                <h2>Room Occupancy</h2>
+                <p>Occupied <span id="repOccupiedText">0 of 0</span></p>
+                <progress id="repOccupiedProgress" value="0" max="100"></progress>
+
+                <p>Available <span id="repAvailableText">0 of 0</span></p>
+                <progress id="repAvailableProgress" value="0" max="100"></progress>
+
+                <p>Maintenance <span id="repMaintenanceText">0 of 0</span></p>
+                <progress id="repMaintenanceProgress" value="0" max="100"></progress>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

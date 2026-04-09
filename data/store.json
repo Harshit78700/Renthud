@@ -1,0 +1,682 @@
+{
+  "adminUser": {
+    "email": "admin@gmail.com",
+    "password": "1234"
+  },
+  "currentUser": {
+    "email": "admin@gmail.com"
+  },
+  "rooms": [
+    "R001",
+    "R002",
+    "R003",
+    "R004",
+    "R005",
+    "R006",
+    "R007",
+    "R008",
+    "R009",
+    "R010",
+    "R011",
+    "R012",
+    "R013",
+    "R014",
+    "R015",
+    "R016",
+    "R017",
+    "R018",
+    "R019",
+    "R020",
+    "R021",
+    "R022",
+    "R023",
+    "R024",
+    "R025",
+    "R026",
+    "R027",
+    "R028",
+    "R029",
+    "R030",
+    "R031",
+    "R032",
+    "R033",
+    "R034",
+    "R035",
+    "R036",
+    "R037",
+    "R038",
+    "R039",
+    "R040",
+    "R041",
+    "R042",
+    "R043",
+    "R044",
+    "R045",
+    "R046",
+    "R047",
+    "R048",
+    "R049",
+    "R050"
+  ],
+  "tenants": [
+    {
+      "name": "Tenant 1",
+      "room": "R001",
+      "phone": "9000000000"
+    },
+    {
+      "name": "Tenant 2",
+      "room": "R002",
+      "phone": "9000000001"
+    },
+    {
+      "name": "Tenant 3",
+      "room": "R003",
+      "phone": "9000000002"
+    },
+    {
+      "name": "Tenant 4",
+      "room": "R004",
+      "phone": "9000000003"
+    },
+    {
+      "name": "Tenant 5",
+      "room": "R005",
+      "phone": "9000000004"
+    },
+    {
+      "name": "Tenant 6",
+      "room": "R006",
+      "phone": "9000000005"
+    },
+    {
+      "name": "Tenant 7",
+      "room": "R007",
+      "phone": "9000000006"
+    },
+    {
+      "name": "Tenant 8",
+      "room": "R008",
+      "phone": "9000000007"
+    },
+    {
+      "name": "Tenant 9",
+      "room": "R009",
+      "phone": "9000000008"
+    },
+    {
+      "name": "Tenant 10",
+      "room": "R010",
+      "phone": "9000000009"
+    },
+    {
+      "name": "Tenant 11",
+      "room": "R011",
+      "phone": "9000000010"
+    },
+    {
+      "name": "Tenant 12",
+      "room": "R012",
+      "phone": "9000000011"
+    },
+    {
+      "name": "Tenant 13",
+      "room": "R013",
+      "phone": "9000000012"
+    },
+    {
+      "name": "Tenant 14",
+      "room": "R014",
+      "phone": "9000000013"
+    },
+    {
+      "name": "Tenant 15",
+      "room": "R015",
+      "phone": "9000000014"
+    },
+    {
+      "name": "Tenant 16",
+      "room": "R016",
+      "phone": "9000000015"
+    },
+    {
+      "name": "Tenant 17",
+      "room": "R017",
+      "phone": "9000000016"
+    },
+    {
+      "name": "Tenant 18",
+      "room": "R018",
+      "phone": "9000000017"
+    },
+    {
+      "name": "Tenant 19",
+      "room": "R019",
+      "phone": "9000000018"
+    },
+    {
+      "name": "Tenant 20",
+      "room": "R020",
+      "phone": "9000000019"
+    },
+    {
+      "name": "Tenant 21",
+      "room": "R021",
+      "phone": "9000000020"
+    },
+    {
+      "name": "Tenant 22",
+      "room": "R022",
+      "phone": "9000000021"
+    },
+    {
+      "name": "Tenant 23",
+      "room": "R023",
+      "phone": "9000000022"
+    },
+    {
+      "name": "Tenant 24",
+      "room": "R024",
+      "phone": "9000000023"
+    },
+    {
+      "name": "Tenant 25",
+      "room": "R025",
+      "phone": "9000000024"
+    },
+    {
+      "name": "Tenant 26",
+      "room": "R026",
+      "phone": "9000000025"
+    },
+    {
+      "name": "Tenant 27",
+      "room": "R027",
+      "phone": "9000000026"
+    },
+    {
+      "name": "Tenant 28",
+      "room": "R028",
+      "phone": "9000000027"
+    },
+    {
+      "name": "Tenant 29",
+      "room": "R029",
+      "phone": "9000000028"
+    },
+    {
+      "name": "Tenant 30",
+      "room": "R030",
+      "phone": "9000000029"
+    },
+    {
+      "name": "Tenant 31",
+      "room": "R031",
+      "phone": "9000000030"
+    },
+    {
+      "name": "Tenant 32",
+      "room": "R032",
+      "phone": "9000000031"
+    },
+    {
+      "name": "Tenant 33",
+      "room": "R033",
+      "phone": "9000000032"
+    },
+    {
+      "name": "Tenant 34",
+      "room": "R034",
+      "phone": "9000000033"
+    },
+    {
+      "name": "Tenant 35",
+      "room": "R035",
+      "phone": "9000000034"
+    },
+    {
+      "name": "Tenant 36",
+      "room": "R036",
+      "phone": "9000000035"
+    },
+    {
+      "name": "Tenant 37",
+      "room": "R037",
+      "phone": "9000000036"
+    },
+    {
+      "name": "Tenant 38",
+      "room": "R038",
+      "phone": "9000000037"
+    },
+    {
+      "name": "Tenant 39",
+      "room": "R039",
+      "phone": "9000000038"
+    },
+    {
+      "name": "Tenant 40",
+      "room": "R040",
+      "phone": "9000000039"
+    },
+    {
+      "name": "Tenant 41",
+      "room": "R041",
+      "phone": "9000000040"
+    },
+    {
+      "name": "Tenant 42",
+      "room": "R042",
+      "phone": "9000000041"
+    },
+    {
+      "name": "Tenant 43",
+      "room": "R043",
+      "phone": "9000000042"
+    },
+    {
+      "name": "Tenant 44",
+      "room": "R044",
+      "phone": "9000000043"
+    },
+    {
+      "name": "Tenant 45",
+      "room": "R045",
+      "phone": "9000000044"
+    },
+    {
+      "name": "Tenant 46",
+      "room": "R046",
+      "phone": "9000000045"
+    },
+    {
+      "name": "Tenant 47",
+      "room": "R047",
+      "phone": "9000000046"
+    },
+    {
+      "name": "Tenant 48",
+      "room": "R048",
+      "phone": "9000000047"
+    },
+    {
+      "name": "Tenant 49",
+      "room": "R049",
+      "phone": "9000000048"
+    },
+    {
+      "name": "Tenant 50",
+      "room": "R050",
+      "phone": "9000000049"
+    }
+  ],
+  "payments": [
+    {
+      "tenant": "Tenant 1",
+      "room": "R001",
+      "month": "January 2026",
+      "amount": 4500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000001"
+    },
+    {
+      "tenant": "Tenant 2",
+      "room": "R002",
+      "month": "February 2026",
+      "amount": 5000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000002"
+    },
+    {
+      "tenant": "Tenant 3",
+      "room": "R003",
+      "month": "March 2026",
+      "amount": 5500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000003"
+    },
+    {
+      "tenant": "Tenant 4",
+      "room": "R004",
+      "month": "April 2026",
+      "amount": 6000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000004"
+    },
+    {
+      "tenant": "Tenant 5",
+      "room": "R005",
+      "month": "May 2026",
+      "amount": 6500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000005"
+    },
+    {
+      "tenant": "Tenant 6",
+      "room": "R006",
+      "month": "June 2026",
+      "amount": 7000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000006"
+    },
+    {
+      "tenant": "Tenant 7",
+      "room": "R007",
+      "month": "July 2026",
+      "amount": 4500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000007"
+    },
+    {
+      "tenant": "Tenant 8",
+      "room": "R008",
+      "month": "August 2026",
+      "amount": 5000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000008"
+    },
+    {
+      "tenant": "Tenant 9",
+      "room": "R009",
+      "month": "September 2026",
+      "amount": 5500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000009"
+    },
+    {
+      "tenant": "Tenant 10",
+      "room": "R010",
+      "month": "October 2026",
+      "amount": 6000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000010"
+    },
+    {
+      "tenant": "Tenant 11",
+      "room": "R011",
+      "month": "November 2026",
+      "amount": 6500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000011"
+    },
+    {
+      "tenant": "Tenant 12",
+      "room": "R012",
+      "month": "December 2026",
+      "amount": 7000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000012"
+    },
+    {
+      "tenant": "Tenant 13",
+      "room": "R013",
+      "month": "January 2026",
+      "amount": 4500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000013"
+    },
+    {
+      "tenant": "Tenant 14",
+      "room": "R014",
+      "month": "February 2026",
+      "amount": 5000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000014"
+    },
+    {
+      "tenant": "Tenant 15",
+      "room": "R015",
+      "month": "March 2026",
+      "amount": 5500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000015"
+    },
+    {
+      "tenant": "Tenant 16",
+      "room": "R016",
+      "month": "April 2026",
+      "amount": 6000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000016"
+    },
+    {
+      "tenant": "Tenant 17",
+      "room": "R017",
+      "month": "May 2026",
+      "amount": 6500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000017"
+    },
+    {
+      "tenant": "Tenant 18",
+      "room": "R018",
+      "month": "June 2026",
+      "amount": 7000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000018"
+    },
+    {
+      "tenant": "Tenant 19",
+      "room": "R019",
+      "month": "July 2026",
+      "amount": 4500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000019"
+    },
+    {
+      "tenant": "Tenant 20",
+      "room": "R020",
+      "month": "August 2026",
+      "amount": 5000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000020"
+    },
+    {
+      "tenant": "Tenant 21",
+      "room": "R021",
+      "month": "September 2026",
+      "amount": 5500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000021"
+    },
+    {
+      "tenant": "Tenant 22",
+      "room": "R022",
+      "month": "October 2026",
+      "amount": 6000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000022"
+    },
+    {
+      "tenant": "Tenant 23",
+      "room": "R023",
+      "month": "November 2026",
+      "amount": 6500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000023"
+    },
+    {
+      "tenant": "Tenant 24",
+      "room": "R024",
+      "month": "December 2026",
+      "amount": 7000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000024"
+    },
+    {
+      "tenant": "Tenant 25",
+      "room": "R025",
+      "month": "January 2026",
+      "amount": 4500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000025"
+    },
+    {
+      "tenant": "Tenant 26",
+      "room": "R026",
+      "month": "February 2026",
+      "amount": 5000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000026"
+    },
+    {
+      "tenant": "Tenant 27",
+      "room": "R027",
+      "month": "March 2026",
+      "amount": 5500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000027"
+    },
+    {
+      "tenant": "Tenant 28",
+      "room": "R028",
+      "month": "April 2026",
+      "amount": 6000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000028"
+    },
+    {
+      "tenant": "Tenant 29",
+      "room": "R029",
+      "month": "May 2026",
+      "amount": 6500,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000029"
+    },
+    {
+      "tenant": "Tenant 30",
+      "room": "R030",
+      "month": "June 2026",
+      "amount": 7000,
+      "status": "Collected",
+      "method": "Paytm",
+      "utr": "UTR2026000030"
+    },
+    {
+      "tenant": "Tenant 11",
+      "room": "R011",
+      "month": "March 2026",
+      "amount": 5000,
+      "status": "Pending",
+      "method": "UPI",
+      "utr": ""
+    },
+    {
+      "tenant": "Tenant 12",
+      "room": "R012",
+      "month": "April 2026",
+      "amount": 5500,
+      "status": "Pending",
+      "method": "UPI",
+      "utr": ""
+    },
+    {
+      "tenant": "Tenant 13",
+      "room": "R013",
+      "month": "May 2026",
+      "amount": 6000,
+      "status": "Pending",
+      "method": "UPI",
+      "utr": ""
+    },
+    {
+      "tenant": "Tenant 14",
+      "room": "R014",
+      "month": "June 2026",
+      "amount": 5000,
+      "status": "Pending",
+      "method": "UPI",
+      "utr": ""
+    },
+    {
+      "tenant": "Tenant 15",
+      "room": "R015",
+      "month": "March 2026",
+      "amount": 5500,
+      "status": "Pending",
+      "method": "UPI",
+      "utr": ""
+    },
+    {
+      "tenant": "Tenant 16",
+      "room": "R016",
+      "month": "April 2026",
+      "amount": 6000,
+      "status": "Pending",
+      "method": "UPI",
+      "utr": ""
+    },
+    {
+      "tenant": "Tenant 21",
+      "room": "R021",
+      "month": "March 2026",
+      "amount": 5500,
+      "status": "Overdue",
+      "method": "UPI",
+      "utr": ""
+    },
+    {
+      "tenant": "Tenant 22",
+      "room": "R022",
+      "month": "April 2026",
+      "amount": 6000,
+      "status": "Overdue",
+      "method": "UPI",
+      "utr": ""
+    },
+    {
+      "tenant": "Tenant 23",
+      "room": "R023",
+      "month": "May 2026",
+      "amount": 5500,
+      "status": "Overdue",
+      "method": "UPI",
+      "utr": ""
+    },
+    {
+      "tenant": "Tenant 24",
+      "room": "R024",
+      "month": "June 2026",
+      "amount": 6000,
+      "status": "Overdue",
+      "method": "UPI",
+      "utr": ""
+    }
+  ],
+  "ownerProfile": null,
+  "customScannerImage": "",
+  "flags": {
+    "renthubSeed50Done": true,
+    "renthubSeed30PaytmDone": true,
+    "renthubSeedPendingOverdueDone": true
+  }
+}

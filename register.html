@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentHub - Create Account</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="auth-page">
+    <div class="register-wrapper">
+        <div class="register-hero">
+            <div class="hero-bg"><i class="fa-solid fa-users"></i></div>
+            <div class="hero-content">
+                <h1><i class="fa-solid fa-house"></i> RentHub</h1>
+                <p>Launch your property management setup in a few minutes.</p>
+            </div>
+        </div>
+
+        <div class="register-card-modern">
+            <div class="card-header">
+                <i class="fa-solid fa-user-plus"></i>
+                <h2>Create Account</h2>
+                <p>Set your admin profile and start using RentHub.</p>
+            </div>
+
+            <form class="register-form" onsubmit="return false;">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regName"><i class="fa-solid fa-user"></i> Full Name</label>
+                        <input type="text" id="regName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regPhone"><i class="fa-solid fa-phone"></i> Phone</label>
+                        <input type="tel" id="regPhone" placeholder="9876543210" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="regEmail"><i class="fa-solid fa-envelope"></i> Email</label>
+                    <input type="email" id="regEmail" placeholder="owner@renthub.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regProperty"><i class="fa-solid fa-building"></i> Property Name</label>
+                        <input type="text" id="regProperty" placeholder="Sunrise Residency" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regLocation"><i class="fa-solid fa-location-dot"></i> Location</label>
+                        <input type="text" id="regLocation" placeholder="Mumbai" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="regPassword"><i class="fa-solid fa-lock"></i> Password</label>
+                    <input type="password" id="regPassword" placeholder="Create password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="regConfirm"><i class="fa-solid fa-check"></i> Confirm Password</label>
+                    <input type="password" id="regConfirm" placeholder="Re-enter password" required>
+                </div>
+
+                <button type="button" onclick="registerUser()" class="register-btn">
+                    <span>Create Account</span>
+                    <i class="fa-solid fa-rocket"></i>
+                </button>
+            </form>
+
+            <div class="register-footer">
+                <p id="regError" class="error-modern"></p>
+                <div class="auth-switch">
+                    Already have an account? <a href="index.html" class="switch-link">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
