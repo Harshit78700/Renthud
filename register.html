@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RentHub - Create Account</title>
+    <title>RentHub - Register</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="auth-page">
+<body class="auth-page" data-page="register">
     <div class="register-wrapper">
         <div class="register-hero">
-            <div class="hero-bg"><i class="fa-solid fa-users"></i></div>
+            <div class="hero-bg"><i class="fa-solid fa-user-shield"></i></div>
             <div class="hero-content">
                 <h1><i class="fa-solid fa-house"></i> RentHub</h1>
-                <p>Launch your property management setup in a few minutes.</p>
+                <p>Create an admin account for full control or a customer account for booking and rent payments.</p>
             </div>
         </div>
 
@@ -21,7 +21,7 @@
             <div class="card-header">
                 <i class="fa-solid fa-user-plus"></i>
                 <h2>Create Account</h2>
-                <p>Set your admin profile and start using RentHub.</p>
+                <p>Choose your role first, then complete the details below.</p>
             </div>
 
             <form class="register-form" onsubmit="return false;">
@@ -36,30 +36,42 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="regEmail"><i class="fa-solid fa-envelope"></i> Email</label>
-                    <input type="email" id="regEmail" placeholder="owner@renthub.com" required>
-                </div>
-
                 <div class="form-row">
                     <div class="form-group">
+                        <label for="regEmail"><i class="fa-solid fa-envelope"></i> Email</label>
+                        <input type="email" id="regEmail" placeholder="name@renthub.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regRole"><i class="fa-solid fa-user-tag"></i> Register As</label>
+                        <select id="regRole" onchange="toggleRegisterFields()">
+                            <option value="admin">Admin</option>
+                            <option value="customer">Customer</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="adminOnlyFields" class="form-row">
+                    <div class="form-group">
                         <label for="regProperty"><i class="fa-solid fa-building"></i> Property Name</label>
-                        <input type="text" id="regProperty" placeholder="Sunrise Residency" required>
+                        <input type="text" id="regProperty" placeholder="Sunrise Residency">
                     </div>
                     <div class="form-group">
                         <label for="regLocation"><i class="fa-solid fa-location-dot"></i> Location</label>
-                        <input type="text" id="regLocation" placeholder="Mumbai" required>
+                        <input type="text" id="regLocation" placeholder="Mumbai">
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="regPassword"><i class="fa-solid fa-lock"></i> Password</label>
-                    <input type="password" id="regPassword" placeholder="Create password" required>
-                </div>
+                <p id="customerRegisterHint" class="subtle-note" style="display:none;">Customer accounts can log in, see available rooms, book a room, and pay rent online.</p>
 
-                <div class="form-group">
-                    <label for="regConfirm"><i class="fa-solid fa-check"></i> Confirm Password</label>
-                    <input type="password" id="regConfirm" placeholder="Re-enter password" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regPassword"><i class="fa-solid fa-lock"></i> Password</label>
+                        <input type="password" id="regPassword" placeholder="Create password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="regConfirm"><i class="fa-solid fa-check"></i> Confirm Password</label>
+                        <input type="password" id="regConfirm" placeholder="Re-enter password" required>
+                    </div>
                 </div>
 
                 <button type="button" onclick="registerUser()" class="register-btn">

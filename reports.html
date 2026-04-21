@@ -7,37 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="app-page">
+<body class="app-page" data-page="reports" data-role-guard="admin">
 <div class="dashboard">
-    <div class="sidebar">
-        <div>
-            <h2>RentHub</h2>
-            <p>Property Manager</p>
-            <ul>
-                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-                <li><a href="rooms.html"><i class="fa-solid fa-door-open"></i> Rooms</a></li>
-                <li><a href="tenants.html"><i class="fa-solid fa-users"></i> Tenants</a></li>
-                <li><a href="payments.html"><i class="fa-solid fa-credit-card"></i> Payments</a></li>
-                <li class="active"><a href="reports.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
-            </ul>
-        </div>
-
-        <div class="user" id="userPanel">
-            <p><b id="currentUserName">Admin User</b></p>
-            <p id="currentUserEmail">admin@renthub.com</p>
-            <p><button onclick="logout()" class="link-button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></p>
-        </div>
-    </div>
+    <aside class="sidebar" id="appSidebar"></aside>
 
     <div class="main">
         <div class="topbar">
             <div>
                 <h1>Reports</h1>
-                <p>Overall property performance snapshot.</p>
+                <p>Booking, occupancy, and rent collection summary.</p>
             </div>
             <div class="button-group">
-                <button onclick="exportReportsCSV()"><i class="fa-solid fa-file-csv"></i> Export CSV</button>
-                <button onclick="exportReportsPDF()"><i class="fa-solid fa-file-pdf"></i> Export PDF</button>
+                <button type="button" onclick="exportReportsCSV()"><i class="fa-solid fa-file-csv"></i> Export CSV</button>
+                <button type="button" onclick="exportReportsPDF()"><i class="fa-solid fa-file-pdf"></i> Export PDF</button>
             </div>
         </div>
 
@@ -58,13 +40,13 @@
                 <p>Payments Collected</p>
             </div>
             <div class="card">
-                <div class="icon orange"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div class="icon orange"><i class="fa-solid fa-money-bill-wave"></i></div>
                 <h2 id="repPaytmCount">0</h2>
-                <p>Paytm Payments</p>
+                <p>Digital Payments</p>
             </div>
         </div>
 
-        <div class="overview-grid" style="margin-top: 20px;">
+        <div class="overview-grid report-grid">
             <div class="overview">
                 <h2>Payment Status Breakdown</h2>
                 <p>Paid <span id="repPaidText">0 of 0</span></p>
@@ -79,7 +61,7 @@
 
             <div class="overview">
                 <h2>Room Occupancy</h2>
-                <p>Occupied <span id="repOccupiedText">0 of 0</span></p>
+                <p>Booked <span id="repOccupiedText">0 of 0</span></p>
                 <progress id="repOccupiedProgress" value="0" max="100"></progress>
 
                 <p>Available <span id="repAvailableText">0 of 0</span></p>
@@ -93,5 +75,6 @@
 </div>
 
 <script src="app.js"></script>
+<script src="reports.js"></script>
 </body>
 </html>

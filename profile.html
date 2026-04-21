@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - RentHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="app-page" data-page="profile" data-role-guard="any">
+<div class="dashboard">
+    <aside class="sidebar" id="appSidebar"></aside>
+
+    <div class="main">
+        <div class="topbar">
+            <div>
+                <h1>Profile</h1>
+                <p><span id="profileRoleText">User</span> account details and access summary.</p>
+            </div>
+        </div>
+
+        <div class="profile-layout">
+            <section class="panel">
+                <div class="panel-header">
+                    <div>
+                        <h2>Account Details</h2>
+                        <p>Update your profile information below.</p>
+                    </div>
+                </div>
+
+                <form class="register-form" onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="profileName">Full Name</label>
+                            <input type="text" id="profileName">
+                        </div>
+                        <div class="form-group">
+                            <label for="profilePhone">Phone</label>
+                            <input type="tel" id="profilePhone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profileEmail">Email</label>
+                        <input type="email" id="profileEmail" disabled>
+                    </div>
+
+                    <div id="profileAdminFields" class="form-row">
+                        <div class="form-group">
+                            <label for="profileProperty">Property Name</label>
+                            <input type="text" id="profileProperty">
+                        </div>
+                        <div class="form-group">
+                            <label for="profileLocation">Location</label>
+                            <input type="text" id="profileLocation">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profilePassword">New Password</label>
+                        <input type="password" id="profilePassword" placeholder="Leave blank to keep current password">
+                    </div>
+
+                    <button type="button" onclick="saveProfile()" class="register-btn">
+                        <span>Save Profile</span>
+                        <i class="fa-solid fa-floppy-disk"></i>
+                    </button>
+                </form>
+
+                <p id="profileMessage" class="success-note"></p>
+            </section>
+
+            <section class="panel">
+                <div class="panel-header">
+                    <div>
+                        <h2>Booking Summary</h2>
+                        <p>Quick overview of your current access.</p>
+                    </div>
+                </div>
+
+                <div class="summary-list">
+                    <div class="summary-item">
+                        <span>Role</span>
+                        <b id="profileRoleTextCard">Active Account</b>
+                    </div>
+                    <div class="summary-item">
+                        <span>Booked Room</span>
+                        <b id="profileRoomText">No room booked</b>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="profile.js"></script>
+</body>
+</html>

@@ -3,61 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tenants - RentHub</title>
+    <title>Customers - RentHub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="app-page">
+<body class="app-page" data-page="tenants" data-role-guard="admin">
 <div class="dashboard">
-    <div class="sidebar">
-        <div>
-            <h2>RentHub</h2>
-            <p>Property Manager</p>
-            <ul>
-                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-                <li><a href="rooms.html"><i class="fa-solid fa-door-open"></i> Rooms</a></li>
-                <li class="active"><a href="tenants.html"><i class="fa-solid fa-users"></i> Tenants</a></li>
-                <li><a href="payments.html"><i class="fa-solid fa-credit-card"></i> Payments</a></li>
-                <li><a href="reports.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
-            </ul>
-        </div>
-
-        <div class="user" id="userPanel">
-            <p><b id="currentUserName">Admin User</b></p>
-            <p id="currentUserEmail">admin@renthub.com</p>
-            <p><button onclick="logout()" class="link-button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></p>
-        </div>
-    </div>
+    <aside class="sidebar" id="appSidebar"></aside>
 
     <div class="main">
         <div class="topbar">
             <div>
-                <h1>Tenants</h1>
-                <p id="totalTenants">0 active tenants</p>
-            </div>
-
-            <div class="button-group">
-                <button onclick="addTenant()"><i class="fa-solid fa-user-plus"></i> Add Tenant</button>
-                <button onclick="addAllTenants()"><i class="fa-solid fa-users"></i> Add All Tenants</button>
+                <h1>Customers</h1>
+                <p id="totalTenants">0 registered customers</p>
             </div>
         </div>
 
-        <div class="table tenants-table">
+        <div class="table customers-table">
             <div class="table-header">
-                <div>Tenant</div>
-                <div>Room</div>
+                <div>Name</div>
+                <div>Email</div>
                 <div>Phone</div>
-                <div>Lease Period</div>
+                <div>Booked Room</div>
                 <div>Actions</div>
             </div>
 
             <div id="tenantTable">
-                <div class="empty">No tenants found</div>
+                <div class="empty">No customers found</div>
             </div>
         </div>
     </div>
 </div>
 
 <script src="app.js"></script>
+<script src="tenants.js"></script>
 </body>
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Payments - RentHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="app-page" data-page="my-payments" data-role-guard="customer">
+<div class="dashboard">
+    <aside class="sidebar" id="appSidebar"></aside>
+
+    <div class="main">
+        <div class="topbar">
+            <div>
+                <h1>My Payments</h1>
+                <p id="myPaymentCount">0 payment records</p>
+            </div>
+        </div>
+
+        <div class="payment-cards">
+            <div class="box green">
+                <h2 id="myCollected">Rs 0</h2>
+                <p>Paid</p>
+            </div>
+            <div class="box yellow">
+                <h2 id="myPending">Rs 0</h2>
+                <p>Outstanding</p>
+            </div>
+        </div>
+
+        <div class="payment-options">
+            <h3>Pay Rent</h3>
+            <p>Generate a UPI QR, upload payment proof, and confirm your rent payment.</p>
+
+            <div class="inline-fields">
+                <input id="upiId" type="text" placeholder="Enter UPI ID (example@upi)">
+                <button type="button" onclick="generateUpiLink()"><i class="fa-solid fa-link"></i> Generate UPI Link</button>
+                <button type="button" onclick="copyUpiId()"><i class="fa-solid fa-copy"></i> Copy UPI ID</button>
+            </div>
+
+            <div class="payment-proof-grid">
+                <div class="qr-box">
+                    <p><b>Scan QR to pay</b></p>
+                    <img id="upiQrImage" alt="UPI QR Code" src="">
+                    <small id="upiQrNote">Generate UPI link to show QR.</small>
+                    <input id="scannerImageInput" type="file" accept="image/*" onchange="handleScannerImageUpload(event)">
+                </div>
+
+                <div class="proof-form">
+                    <div class="inline-fields">
+                        <input id="proofMonth" type="text" placeholder="Month (e.g., April 2026)">
+                        <input id="proofAmount" type="number" min="1" step="0.01" placeholder="Amount">
+                    </div>
+
+                    <div class="inline-fields">
+                        <input id="utrNumber" type="text" placeholder="Enter UTR / Ref number">
+                        <input id="paymentScreenshot" type="file" accept="image/*" onchange="handlePaymentScreenshot(event)">
+                    </div>
+
+                    <div class="proof-preview-wrap">
+                        <img id="paymentProofPreview" alt="Payment proof preview" src="">
+                        <small id="paymentProofName">No screenshot selected</small>
+                    </div>
+
+                    <button type="button" onclick="confirmCustomerPayment()"><i class="fa-solid fa-check"></i> Confirm Payment</button>
+                </div>
+            </div>
+
+            <p id="paymentGatewayInfo"></p>
+        </div>
+
+        <div class="table customer-payments-table">
+            <div class="table-header">
+                <div>Month</div>
+                <div>Room</div>
+                <div>Amount</div>
+                <div>Status</div>
+                <div>Method</div>
+            </div>
+
+            <div id="myPaymentTable">
+                <div class="empty">No payments found</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="my-payments.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - RentHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="app-page" data-page="customer-dashboard" data-role-guard="customer">
+<div class="dashboard">
+    <aside class="sidebar" id="appSidebar"></aside>
+
+    <div class="main">
+        <h1>Welcome, <span id="customerGreeting">Customer</span></h1>
+        <p id="customerDashboardNotice">Track your booking, room availability, and payment activity here.</p>
+
+        <div class="cards">
+            <div class="card">
+                <div class="icon blue"><i class="fa-solid fa-door-open"></i></div>
+                <h2 id="customerBookedRoom">Not booked</h2>
+                <p>Your Room</p>
+                <span>Current booked room</span>
+            </div>
+
+            <div class="card">
+                <div class="icon green"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <h2 id="customerRoomPrice">Choose a room</h2>
+                <p>Monthly Rent</p>
+                <span>Based on your booked room</span>
+            </div>
+
+            <div class="card">
+                <div class="icon orange"><i class="fa-solid fa-clock"></i></div>
+                <h2 id="customerDueCount">0</h2>
+                <p>Open Payments</p>
+                <span>Pending or overdue records</span>
+            </div>
+
+            <div class="card">
+                <div class="icon purple"><i class="fa-solid fa-bed"></i></div>
+                <h2 id="customerAvailableRooms">0</h2>
+                <p>Available Rooms</p>
+                <span>Rooms open for booking now</span>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <div>
+                    <h2>Recent Payment Activity</h2>
+                    <p>Your latest rent records.</p>
+                </div>
+                <a class="panel-link" href="my-payments.html">Open Payments</a>
+            </div>
+            <div id="customerRecentPayments" class="mini-list">
+                <div class="empty">No payment activity yet</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="customer-dashboard.js"></script>
+</body>
+</html>

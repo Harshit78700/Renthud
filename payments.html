@@ -7,27 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="app-page">
+<body class="app-page" data-page="payments" data-role-guard="admin">
 <div class="dashboard">
-    <div class="sidebar">
-        <div>
-            <h2>RentHub</h2>
-            <p>Property Manager</p>
-            <ul>
-                <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
-                <li><a href="rooms.html"><i class="fa-solid fa-door-open"></i> Rooms</a></li>
-                <li><a href="tenants.html"><i class="fa-solid fa-users"></i> Tenants</a></li>
-                <li class="active"><a href="payments.html"><i class="fa-solid fa-credit-card"></i> Payments</a></li>
-                <li><a href="reports.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
-            </ul>
-        </div>
-
-        <div class="user" id="userPanel">
-            <p><b id="currentUserName">Admin User</b></p>
-            <p id="currentUserEmail">admin@renthub.com</p>
-            <p><button onclick="logout()" class="link-button"><i class="fa-solid fa-right-from-bracket"></i> Logout</button></p>
-        </div>
-    </div>
+    <aside class="sidebar" id="appSidebar"></aside>
 
     <div class="main">
         <div class="topbar">
@@ -35,7 +17,7 @@
                 <h1>Payments</h1>
                 <p id="totalPayments">0 payment records</p>
             </div>
-            <button onclick="addPayment()"><i class="fa-solid fa-plus"></i> Add Payment</button>
+            <button type="button" onclick="addAdminPayment()"><i class="fa-solid fa-plus"></i> Add Payment</button>
         </div>
 
         <div class="payment-cards">
@@ -53,58 +35,14 @@
             </div>
         </div>
 
-        <div class="payment-options">
-            <h3>UPI Payment</h3>
-            <p>Share UPI QR or ID, then upload screenshot and UTR to confirm payment.</p>
-
-            <div class="inline-fields">
-                <input id="upiId" type="text" placeholder="Enter UPI ID (example@upi)">
-                <button onclick="generateUpiLink()"><i class="fa-solid fa-link"></i> Generate UPI Link</button>
-                <button onclick="copyUpiId()"><i class="fa-solid fa-copy"></i> Copy UPI ID</button>
-            </div>
-
-            <div class="payment-proof-grid">
-                <div class="qr-box">
-                    <p><b>Scan QR to pay</b></p>
-                    <img id="upiQrImage" alt="UPI QR Code" src="">
-                    <small id="upiQrNote">Generate UPI link to show QR.</small>
-                    <input id="scannerImageInput" type="file" accept="image/*" onchange="handleScannerImageUpload(event)">
-                </div>
-
-                <div class="proof-form">
-                    <div class="inline-fields">
-                        <input id="proofTenant" type="text" placeholder="Tenant name">
-                        <input id="proofRoom" type="text" placeholder="Room number">
-                    </div>
-                    <div class="inline-fields">
-                        <input id="proofMonth" type="text" placeholder="Month (e.g., April 2026)">
-                        <input id="proofAmount" type="number" min="1" step="0.01" placeholder="Amount">
-                    </div>
-
-                    <div class="inline-fields">
-                        <input id="utrNumber" type="text" placeholder="Enter UTR / Ref number">
-                        <input id="paymentScreenshot" type="file" accept="image/*" onchange="handlePaymentScreenshot(event)">
-                    </div>
-
-                    <div class="proof-preview-wrap">
-                        <img id="paymentProofPreview" alt="Payment proof preview" src="">
-                        <small id="paymentProofName">No screenshot selected</small>
-                    </div>
-
-                    <button onclick="confirmPaytmPayment()"><i class="fa-solid fa-check"></i> Confirm Payment</button>
-                </div>
-            </div>
-
-            <p id="paymentGatewayInfo"></p>
-        </div>
-
-        <div class="table payments-table">
+        <div class="table payments-table admin-payments-table">
             <div class="table-header">
-                <div>Tenant</div>
+                <div>Customer</div>
                 <div>Room</div>
                 <div>Month</div>
                 <div>Amount</div>
                 <div>Status</div>
+                <div>Method</div>
                 <div>Actions</div>
             </div>
 
@@ -116,5 +54,6 @@
 </div>
 
 <script src="app.js"></script>
+<script src="payments.js"></script>
 </body>
 </html>
